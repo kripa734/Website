@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Global Fusion Collaboration Fellowship</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const project = document.getElementById('project').value;
+
+            if (name == "" || email == "" || project == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Virtual Global Fusion Collaboration Fellowship</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#tracks">Program Tracks</a></li>
+                    <li><a href="#mentors">Mentors</a></li>
+                    <li><a href="#apply">Apply Now</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="banner">
+        <div class="container">
+            <h2>Empowering Global Leaders in Fusion Energy</h2>
+            <a href="#apply" class="cta-button">Apply Now</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About the Fellowship</h2>
+            <p>Our mission is to advance fusion energy by fostering global collaboration and interdisciplinary learning...</p>
+        </div>
+    </section>
+
+    <section id="tracks">
+        <div class="container">
+            <h2>Program Tracks</h2>
+            <div class="track">
+                <h3>Policy & Law</h3>
+                <p>Fellows will work on developing regulatory frameworks and international cooperation strategies...</p>
+            </div>
+            <div class="track">
+                <h3>Commercialization & Business</h3>
+                <p>This track focuses on creating business models and strategies for market entry...</p>
+            </div>
+            <!-- Add more tracks as needed -->
+        </div>
+    </section>
+
+    <section id="mentors">
+        <div class="container">
+            <h2>Meet the Mentors</h2>
+            <div class="mentor">
+                <img src="mentor1.jpg" alt="Mentor Name">
+                <h3>Dr. Jane Doe</h3>
+                <p>Expert in Fusion Energy Policy</p>
+            </div>
+            <div class="mentor">
+                <img src="mentor2.jpg" alt="Mentor Name">
+                <h3>Prof. John Smith</h3>
+                <p>Renowned Fusion Researcher</p>
+            </div>
+            <!-- Add more mentors as needed -->
+        </div>
+    </section>
+
+    <section id="apply">
+        <div class="container">
+            <h2>Apply Now</h2>
+            <form action="/submit-application" method="post" onsubmit="return validateForm()">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="track">Select Track:</label>
+                <select id="track" name="track">
+                    <option value="policy-law">Policy & Law</option>
+                    <option value="commercialization-business">Commercialization & Business</option>
+                    <option value="stem-research">STEM Research & Development</option>
+                    <!-- Add more options as needed -->
+                </select>
+                
+                <label for="project">Proposed Project Idea:</label>
+                <textarea id="project" name="project" rows="5" required></textarea>
+                
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>Contact us at <a href="mailto:info@fusionfellowship.org">info@fusionfellowship.org</a></p>
+            <p>&copy; 2024 Virtual Global Fusion Collaboration Fellowship</p>
+        </div>
+    </footer>
+</body>
+</html>
